@@ -7,6 +7,10 @@ this.url = url;
 }
 
 // Creating a method to show the objects
+  /*
+  display () {
+  ${this.name......
+ }  */
 
 }
 
