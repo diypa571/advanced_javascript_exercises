@@ -1,4 +1,4 @@
-// Creating an oject in Javascript
+// Creating an object in Javascript
 const ObjectContianer = {
 Italay:"Rome",
 German:"Berlin",
