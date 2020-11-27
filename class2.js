@@ -1,5 +1,5 @@
 class Linux {
-constructor(distro =  'Linux') {
+constructor(distro) {
 this.distro = distro;
 }
 
