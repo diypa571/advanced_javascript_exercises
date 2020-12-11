@@ -1,0 +1,70 @@
+<!---
+Simple Javascript text changer
+Diyar Par
+
+-->
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<title>Webbteknik för ingenjörer</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content=" " />
+<meta name="robots" content="index, follow"/>
+<meta name="description" content="There will be description here....">
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="author" content="﻿diypa571"/>
+<meta name="copyright" content="dipa0032@student.umu.se"/>
+</head>
+<body>
+
+
+<p id="txtshow"> Simple javascript </p>
+
+<script>
+        // This is the first text
+        let showtxt1 =" Iam the first text...";
+        // This is the second text
+        let showtxt2 =" Iam the second test...";
+        // This is the third text
+        let showtxt3 =" Iam the third...";
+        // And you can add as many texts you want...
+        // Just remember this... if(numberforinc == 3)
+        // modify the condition...
+
+
+let numberforinc = 0;
+setInterval(function(){
+
+    numberforinc += 1;
+    if(numberforinc == 1) {
+    console.log(showtxt1);
+    document.getElementById("txtshow").innerHTML = showtxt1 ;
+    }
+
+    if(numberforinc == 2) {
+    console.log(showtxt2);
+    document.getElementById("txtshow").innerHTML = showtxt2 ;
+    }
+
+    if(numberforinc == 3) {
+    console.log(showtxt3);
+    document.getElementById("txtshow").innerHTML = showtxt3 ;
+    }
+
+
+    if(numberforinc == 3) {
+    numberforinc =0;
+    }
+
+    }, 1000);
+
+
+</script>
+
+
+<body>
+</html>
