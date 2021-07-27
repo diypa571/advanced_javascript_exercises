@@ -1,0 +1,73 @@
+<!--
+Diyar Parwana
+This a good javascript-json search
+It idd took me 30 mintes to write...
+https://github.com/diypa571/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Json search demo</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta theID="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
+</head>
+<body>
+
+
+
+
+<div class="card">
+    <div class="card-body">
+        Search for any number between 1 and 100<br />
+        <form action="" method="get">
+        <input type="text" class="form-control" name="theID">
+        <button type="submit" class="btn btn-warning">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="card bg-info">
+      <div class="card-body">
+          <p id="visaTitle"></p>
+          <p id="visaBody"></p>
+      </div>
+  </div>
+
+
+
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+if (params.has("theID")) {
+  console.log(" The param is... " + params.get("theID"));
+} else {
+  console.log(" Please type any number between 1 and 100.");
+}
+
+
+
+function searchit() {
+  var theURL = "https://jsonplaceholder.typicode.com/posts/"+params.get("theID");
+alert(theURL);
+axios.get(theURL)
+.then(function (response) {
+// Kommer att skriva skriva data till title och body elementen
+var title = response.data.title;
+var body = response.data.body
+document.getElementById("visaTitle").innerHTML = title
+document.getElementById("visaBody").innerHTML = body
+})
+}
+
+
+searchit();
+
+</script>
+
+
+</body>
+</html>
